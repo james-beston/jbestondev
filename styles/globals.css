@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#__next {
+  min-height: 100%;
+}
+
+
+@keyframes bgcolor {
+  0% {
+    background-color: #db2777;
+  }
+  14% {
+    background-color: #dc2626;
+  }
+  28% {
+    background-color: #fcd34d;
+  }
+  42% {
+    background-color: #10b981;
+  }
+  56% {
+    background-color: #22d3ee;
+  }
+  70% {
+    background-color: #0369a1;
+  }
+  84% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #db2777;
+  }
+}
+
+.colorchange {
+  -webkit-animation: bgcolor 40s ease infinite;
+  animation: bgcolor 40s ease infinite;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+
