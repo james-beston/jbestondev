@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -31,9 +32,11 @@ export default function Navigation({ current }) {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
-                <div className="flex-shrink-0 flex items-center font-black text-white text-2xl">
-                  James Beston
-                </div>
+                <Link href="/">
+                  <div className="flex-shrink-0 flex items-center font-black text-white text-2xl cursor-pointer">
+                    James Beston
+                  </div>
+                </Link>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (

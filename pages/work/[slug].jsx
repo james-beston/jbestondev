@@ -5,6 +5,8 @@ import Navigation from '@components/Navigation'
 import { singleProjectQuery, projectSlugsQuery } from '@lib/queries'
 import { sanityClient, getClient, overlayDrafts } from '@lib/sanity.server'
 import { usePreviewSubscription } from '@lib/sanity';
+import CoverImage from '@components/projects/CoverImage';
+import ProjectDetails from '@components/projects/ProjectDetails';
 
 export default function Project({ data = {}, preview }) {
   const router = useRouter()
@@ -33,7 +35,8 @@ export default function Project({ data = {}, preview }) {
       <Navigation current="work" />
 
       <main>
-        
+        <CoverImage image={project.headline_image} title={project.title} />
+        <ProjectDetails project={project} />
       </main>     
     </div>
   );
