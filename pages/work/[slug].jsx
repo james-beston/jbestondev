@@ -35,7 +35,7 @@ export default function Project({ data = {}, preview }) {
       <Navigation current="work" />
 
       <main>
-        <CoverImage image={project.headline_image} title={project.title} />
+        <CoverImage image={project.headline_image} altText={project.title} />
         <ProjectDetails project={project} />
       </main>     
     </div>
