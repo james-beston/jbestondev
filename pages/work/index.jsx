@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Navigation from '@components/Navigation'
 import { projectQuery } from '@lib/queries'
 import { getClient, overlayDrafts } from '@lib/sanity.server'
-import ProjecHero from '@components/ProjectHero'
+import ProjectHero from '@components/ProjectHero'
+import OtherProjects from '@components/OtherProjects'
+import Footer from '@components/Footer'
 
 export default function Work({ allProjects, preview }) {
   const heroProject = allProjects[0]
@@ -16,10 +18,16 @@ export default function Work({ allProjects, preview }) {
       </Head>
       <Navigation current="work" />
 
-      <main className="lg:relative">
-        <ProjecHero project={heroProject} />
+      <main className="lg:relative min-h-screen">
+        <ProjectHero project={heroProject} />
+        {otherProjects.length > 0 && (
+          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-4">
+            <OtherProjects projects={otherProjects} />
+          </div>
+        )}
       </main>
 
+      <Footer />
      
     </div>
   )

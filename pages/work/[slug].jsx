@@ -7,6 +7,7 @@ import { sanityClient, getClient, overlayDrafts } from '@lib/sanity.server'
 import { usePreviewSubscription } from '@lib/sanity';
 import CoverImage from '@components/projects/CoverImage';
 import ProjectDetails from '@components/projects/ProjectDetails';
+import Footer from '@components/Footer';
 
 export default function Project({ data = {}, preview }) {
   const router = useRouter()
@@ -37,7 +38,8 @@ export default function Project({ data = {}, preview }) {
       <main>
         <CoverImage image={project.headline_image} altText={project.title} />
         <ProjectDetails project={project} />
-      </main>     
+      </main> 
+      <Footer />
     </div>
   );
 }
