@@ -41,6 +41,11 @@ export default {
       ]
     },
     {
+      name: 'website',
+      title: 'Website',
+      type: 'url'
+    },
+    {
       name: 'introduction',
       title: 'Introduction',
       type: 'text'
