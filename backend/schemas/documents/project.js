@@ -26,6 +26,21 @@ export default {
       }
     },
     {
+      name: 'client',
+      title: 'Client',
+      type: 'string'
+    },
+    {
+      name: 'tools',
+      title: 'Tools',
+      type: 'array',
+      of: [
+        {
+          type: 'string'
+        }
+      ]
+    },
+    {
       name: 'introduction',
       title: 'Introduction',
       type: 'text'
