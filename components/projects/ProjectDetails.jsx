@@ -1,5 +1,5 @@
 import { PortableText } from "@portabletext/react";
-import { portableTextComponents } from "@components/PortableTextComponents";
+import { portableTextComponents } from "@components/portableTextComponents";
 
 export default function ProjectDetails({ project }) {
   return (
